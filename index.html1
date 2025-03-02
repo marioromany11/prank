@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تم تهكير حسابك!</title>
+    <style>
+        body {
+            background-color: black;
+            color: red;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 50px;
+            margin-top: 20%;
+            animation: glitch 1s infinite;
+        }
+        p {
+            font-size: 20px;
+        }
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px red; }
+            50% { text-shadow: -2px -2px blue; }
+            100% { text-shadow: 2px 2px red; }
+        }
+    </style>
+</head>
+<body>
+    <h1>⚠️ تم تهكير حسابك! ⚠️</h1>
+    <p id="details">يتم تحميل البيانات الحساسة...</p>
+
+    <script>
+        setTimeout(() => {
+            document.getElementById("details").innerText = "تم تحميل جميع بياناتك بنجاح!";
+        }, 3000);
+    </script>
+</body>
+</html>
